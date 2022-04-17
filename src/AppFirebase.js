@@ -7,7 +7,6 @@ import {
     getDocs,
     updateDoc,
     deleteDoc,
-    getDoc,
 } from "firebase/firestore";
 
 function AppFirebase() {

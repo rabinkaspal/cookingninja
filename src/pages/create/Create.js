@@ -43,7 +43,9 @@ const Create = () => {
             setIngredients(curIng => [...curIng, ingredient]);
             setNewIngredient("");
             ingredientInput.current.focus();
+            setError(null);
         } else {
+            setError("Ingredient exists.");
             alert("Ingredient exists.");
         }
     };

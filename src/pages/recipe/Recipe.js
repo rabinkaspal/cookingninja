@@ -15,11 +15,11 @@ const Recipe = () => {
     const [error, setError] = useState(null);
 
     const { mode } = useTheme();
-    const recipeRef = doc(db, "recipes", recipeId);
 
     useEffect(() => {
         setPending(true);
 
+        const recipeRef = doc(db, "recipes", recipeId);
         const fetchRecipe = async () => {
             const recipeDoc = await getDoc(recipeRef);
             if (recipeDoc.exists()) {
@@ -31,7 +31,7 @@ const Recipe = () => {
             }
         };
         fetchRecipe();
-    }, []);
+    }, [recipeId]);
 
     return (
         <div>

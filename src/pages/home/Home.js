@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-import { useFetch } from "../../hooks/useFetch";
-import db from "../../firebase/firebase-config";
-import { collection, getDocs } from "firebase/firestore";
 import { useCollection } from "../../hooks/useCollection";
 //styles
 import "./Home.css";
@@ -12,8 +8,8 @@ import RecipeList from "../../components/RecipeList";
 
 const Home = () => {
     //const [data, setData] = useState(null);
-    const [isPending, setPending] = useState(false);
-    const [error, setError] = useState(null);
+    // const [isPending, setPending] = useState(false);
+    // const [error, setError] = useState(null);
 
     // const recipesCollectionRef = collection(db, "recipes");
 
@@ -43,8 +39,8 @@ const Home = () => {
 
     return (
         <div>
-            {error && <p className="error">{error}</p>}
-            {isPending && <p className="loading">Loading Recipes....</p>}
+            {/* {error && <p className="error">{error}</p>} */}
+            {/* <p className="loading">Loading Recipes....</p> */}
             {recipes && <RecipeList recipes={recipes} />}
         </div>
     );
