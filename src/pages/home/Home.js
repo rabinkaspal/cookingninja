@@ -6,6 +6,7 @@ import { useCollection } from "../../hooks/useCollection";
 //styles
 import "./Home.css";
 
+//update for main branch deploy on firebase
 //components
 import RecipeList from "../../components/RecipeList";
 
